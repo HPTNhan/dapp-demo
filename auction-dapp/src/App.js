@@ -58,7 +58,7 @@ return (
 <hr />
 <h4>Auction by seller</h4>
 <div>
-<label>Auction limit</label>
+<label>Auction limit </label>
 <input
 value={this.state.auctionValue}
 onChange={event => this.setState({ auctionValue: event.target.value })}
@@ -68,7 +68,7 @@ onChange={event => this.setState({ auctionValue: event.target.value })}
 <hr />
 <h4>Bidding Form</h4>
 <div>
-<label>Bidding amount</label>
+<label>Bidding amount </label>
 <input
 value={this.state.bidValue}
 onChange={event => this.setState({ bidValue: event.target.value })}
