@@ -25,12 +25,7 @@ contract Auction {
     latestBid = msg.value;
   }
  
-  function finishAuction() restricted public {
+  function finishAuction() public {
     seller.transfer(address(this).balance);
-  }
- 
-  modifier restricted() {
-    require(msg.sender == manager);
-    _;
   }
 }
