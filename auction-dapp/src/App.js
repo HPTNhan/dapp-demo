@@ -12,7 +12,7 @@ class App extends Component {
         balance: '',
         auctionValue: '',
         bidValue: '',
-        closingRemark: 30
+        closingRemark: 90
     };
     countdownTask = null;
     async componentDidMount() {
@@ -80,7 +80,7 @@ class App extends Component {
         return ( 
         <div>
             <h2>Auction Contract</h2>
-            <p>This contract is managed by {this.state.manager}.</p>
+            {/* <p>This contract is managed by {this.state.manager}.</p> */}
             <p>The seller is {this.state.seller}.</p>
             <p>The lattest bidder is {this.state.latestBidder}.</p>
             <p>The lattest bid is {web3.utils.fromWei(this.state.latestBid, 'ether')} ether.</p>
@@ -106,9 +106,8 @@ class App extends Component {
             </div>
             <button onClick={this.onBidSubmit}>Bid</button>
             <hr />
-            <h4>Closing Auction</h4>
-            <button onClick={this.onFinishSubmit}>Close Auction</button>
-            <p>{this.state.closingRemark}</p>
+            <h4>Time remainning</h4>
+            <h2>{this.state.closingRemark}</h2>
         </div>
         );
     }
